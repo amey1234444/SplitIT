@@ -8,7 +8,7 @@ import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { useStoreUser } from "@/hooks/use-store-user";
 import { BarLoader } from "react-spinners";
 import { Authenticated, Unauthenticated } from "convex/react";
-import Image from "next/image";
+// import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -19,13 +19,13 @@ export default function Header() {
     <header className="fixed top-0 w-full border-b bg-white/95 backdrop-blur z-50 supports-[backdrop-filter]:bg-white/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src={"/logos/logo.png"}
-            alt="Vehiql Logo"
-            width={200}
-            height={60}
-            className="h-11 w-auto object-contain"
-          />
+          <div className="flex items-center">
+            <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">
+              Split
+            </span>
+            <span className="text-2xl font-extrabold text-gray-800">IT</span>
+            <span className="ml-1 text-green-600 text-xl">|</span>
+          </div>
         </Link>
 
         {path === "/" && (

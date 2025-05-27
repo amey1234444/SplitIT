@@ -8,7 +8,7 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Splitr",
+  title: "SplitIT",
   description: "The smartest way to split expenses with friends",
 };
 
@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/logos/logo-s.png" sizes="any" />
+        {/* <h1>Split IT</h1> */}
       </head>
       <body className={`${inter.className}`}>
         <ClerkProvider
